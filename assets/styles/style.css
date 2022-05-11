@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,6 +6,12 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     scroll-behavior: smooth;
 }
+:root{
+    --FontP: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    --FontBtn: "Montserrat", sans-serif;
+
+}
+
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -13,8 +19,7 @@
 }
 ::-webkit-scrollbar-track {
     background: black;
-    border: solid 1.6px rgba(33,33,33,0.5);
-    
+    border: solid 1.6px rgba(33, 33, 33, 0.5);
 }
 ::-webkit-scrollbar-thumb {
     background: white;
@@ -22,7 +27,7 @@
     transition: 0.5s;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #A9A9A9;
+    background: #a9a9a9;
 }
 ::-webkit-scrollbar-thumb:active {
     background: #696969;
@@ -34,25 +39,22 @@ body {
     background: #000;
 }
 
-
 body a {
     text-decoration: none;
     outline: none;
 }
 
-
-                            /* --------------------------- HEADER -----------------------------*/
+/* --------------------------- HEADER -----------------------------*/
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px 0 25px;
     background-color: black;
 }
 
 .logo img {
-    height: 70px;
+    width: 200px;
 }
 
 .nav-list {
@@ -69,7 +71,7 @@ header {
     outline: none;
     text-decoration: none;
     font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--FontBtn);
     opacity: 0.7;
     transition: 0.2s;
 }
@@ -79,42 +81,42 @@ header {
 }
 
 .img-menu {
-    display: none!important;
+    display: none !important;
 }
 
-                        /* --------------------------- HEADER END -----------------------------*/
+/* --------------------------- HEADER END -----------------------------*/
 
-
-                        /* --------------------------- START MAIN -----------------------------*/
+/* --------------------------- START MAIN -----------------------------*/
 
 main {
-    background-color: #000; 
+    background-color: #000;
 }
 
 .section-top {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(https://www.themoviedb.org/t/p/original/nIHp6fz2MX33blJKYa9BSbhct7W.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+        url(https://www.themoviedb.org/t/p/original/nIHp6fz2MX33blJKYa9BSbhct7W.jpg);
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 100px 0 100px 0;
+    object-fit: cover;
+    height: 70vh;
 }
 
 .div-top {
     padding-left: 30px;
     padding-top: 50px;
-    width: 50%;
+    max-width: 800px;
+    width: 100%;
 }
 
 .article-top {
-    color: #FFF;
+    color: #fff;
 }
 
 .article-top h2 {
     font-size: 50px;
     font-weight: 540;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-family: var(--FontP);
 }
 
 .article-top p {
@@ -122,37 +124,36 @@ main {
     display: block;
     margin-top: 5px;
     margin-bottom: 40px;
+    line-height: 1.7;
     font-weight: 400;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     text-align: justify;
+    font-family: var(--FontP);
+
 }
 
 .btn-play {
     padding: 15px 30px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #FFF;
+    color: #fff;
     outline: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: 550;
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
-
-    transition: 0.3s;
+    font-family: var(--FontBtn);
+    transition: all .6s ease;
 }
 
 .btn-play:hover {
-    background-color: #FFF;
+    background-color: #fff;
     color: black;
 }
 
-
 .btn-play i {
-    margin-right: 8px;  
+    margin-right: 8px;
 }
-
 
 .btn-info {
     padding: 15px 17px;
@@ -164,26 +165,23 @@ main {
     cursor: pointer;
     font-size: 12px;
     font-weight: 550;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--FontBtn);
 
     transition: 0.3s;
 }
 
 .btn-info:hover {
-    background-color: #FFF;
+    background-color: #fff;
     color: black;
 }
 
-.btn-info i{
+.btn-info i {
     margin-right: 8px;
 }
 
-                                /* --------------------------- MAIN END -----------------------------*/
+/* --------------------------- MAIN END -----------------------------*/
 
-
-
-
-                                /* --------------------------- SECTION MID ----------------------------*/
+/* --------------------------- SECTION MID ----------------------------*/
 
 .section-mid {
     margin-top: 10px;
@@ -200,7 +198,8 @@ main {
     font-weight: 600;
 }
 
-.owl-carousel, .owl-theme {
+.owl-carousel,
+.owl-theme {
     padding: 0 2%;
 }
 
@@ -215,16 +214,16 @@ main {
     transform: scale(1);
 }
 
-#embreve, #films, #series, #document {
+#embreve,
+#films,
+#series,
+#document {
     margin-bottom: 10px;
 }
 
-                                /* --------------------------- SECTION MID END ----------------------------*/
+/* --------------------------- SECTION MID END ----------------------------*/
 
-
-
-
-                                /*  ------------------------------ FOOTER --------------------------------- */
+/*  ------------------------------ FOOTER --------------------------------- */
 
 footer {
     background-color: #000;
@@ -233,32 +232,24 @@ footer {
     text-align: center;
 }
 
-
-
 .p-footer {
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--FontBtn);
     color: white;
-    
-} 
+}
 
-                            /*  ---------------------------------- FOOTER END ---------------------------------- */
+/*  ---------------------------------- FOOTER END ---------------------------------- */
 
+/*  ----------------------------------  MOBILE ---------------------------------- */
 
-
-
-                            /*  ----------------------------------  MOBILE ---------------------------------- */
-
-@media(max-width: 1115px) {
+@media (max-width: 1115px) {
     header {
         padding: 0 8px 0 0;
     }
 }
 
-
-@media (max-width:720px) {
-
+@media (max-width: 720px) {
     header {
         padding: 0;
     }
@@ -285,14 +276,55 @@ footer {
     }
 }
 
-
-@media(max-width: 560px) {
-    header {
-        flex-direction: column;
-        padding-bottom: 15px;
+@media (max-width: 560px) {
+    .hidden-list {
+        display: none;
     }
 
-    #embreve, #films, #series, #document {
+    .img-menu {
+        display: block !important;
+        cursor: pointer !important;
+        color: white !important;
+        font-size: 40px !important;
+        margin-right: 10px !important;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 73px;
+        right: 0px;
+        text-align: center;
+        max-width: 100%;
+        background-color: #000000;
+        overflow: hidden;
+    }
+
+    .hidden-list {
+        display: none;
+    }
+
+    .item-list {
+        display: block;
+        margin: 20px 0 20px 0;
+    }
+
+    .nav-link {
+        color: white;
+        font-size: 15px;
+    }
+
+    .img-menu:hover {
+        opacity: 0.7 !important;
+    }
+
+    .img-menu:active {
+        opacity: 0.4 !important;
+    }
+
+    #embreve,
+    #films,
+    #series,
+    #document {
         margin-top: 50px;
     }
 
@@ -316,57 +348,5 @@ footer {
     .btn-play {
         margin-bottom: 20px;
         margin-right: 0;
-    }
-}
-
-
-@media(max-width: 361px) {
-    header {
-        flex-direction: row;
-        padding: 0 10px 0 0;
-    }
-    
-    .nav-list {
-        position: absolute;
-        top: 73px;
-        right: 0px;
-        text-align: center;
-        max-width: 140px;
-        background-color: black;
-        border-radius: 0 0 4px 4px;
-        overflow: hidden;
-    }
-
-    .hidden-list {
-        display: none;
-    }
-
-    .item-list {
-        display: block;
-        margin-bottom: 7px;
-    }
-
-    .nav-link {
-        color: white;
-        font-size: 15px;
-        
-    }
-
-    .img-menu {
-        display: block!important;
-        cursor: pointer!important;
-        color: white!important;
-        font-size: 40px!important;
-        margin-right: 10px!important;
-
-        transition: 0.2s;
-    }
-
-    .img-menu:hover {
-        opacity: 0.7!important;
-    }
-
-    .img-menu:active {
-        opacity: 0.4!important;
     }
 }
